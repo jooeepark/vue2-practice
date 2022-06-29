@@ -1,20 +1,14 @@
 <template>
-  <div class="about2">
+  <div class="about">
     <app-header></app-header>
-    <h1>This is an about2 page</h1>
-    <child-component v-bind:propsdata="message" class="text"></child-component>
-    <!--출력될 결과는 props이다-->
+    <h1>This is an about page</h1>
+    <div class="text"> {{message}} </div>
   </div>
 </template>
 
 <script>
 
 // 하위 컴포넌트 
-var childComponent = {
-  props: ['propsdata'],
-  template: '<p>{{ propsdata }}</p>'
-}
-
 const appHeader = {
   template: '<h2>HELLO</h2>'
 }
@@ -22,12 +16,11 @@ const appHeader = {
 // 상위 컴포넌트 : root 컴포넌트
 export default {
   components: {
-    'app-header': appHeader,
-    'child-component': childComponent
+    'app-header': appHeader
   },
   data() {
     return {
-      message: 'props'
+      message: '데이터 바인딩'
     }
   }
 }
