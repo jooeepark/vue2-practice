@@ -20,10 +20,19 @@ export default {
   },
   data() {
     return {
-      message: '데이터 바인딩'
+      message: 'Watch속성'
     }
+  },
+  methods: {
+    logMessage() {
+      console.log(this.message);
+    }
+  },
+  watch: {
+    'message': 'logMessage'
   }
 }
+
 </script>
 
 <style scoped>

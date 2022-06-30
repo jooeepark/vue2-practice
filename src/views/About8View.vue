@@ -2,7 +2,7 @@
   <div class="about8">
     <app-header></app-header>
     <h1>This is an about8 page</h1>
-    <div class="text"> {{message}} </div>
+    <div class="text"> {{ message }} </div>
   </div>
 </template>
 
@@ -20,9 +20,16 @@ export default {
   },
   data() {
     return {
-      message: '데이터 바인딩'
+      message: 'Filters'
     }
-  }
+  },
+  // filters: {
+	// 	capitalize: function(value) {
+	// 		if (!value) return ''
+	// 		value = value.toString()
+	// 		return value.cartAt(0).toUpperCase() + value.slice(1)
+	// 	}
+	// }
 }
 </script>
 
