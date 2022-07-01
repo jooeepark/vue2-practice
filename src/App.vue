@@ -14,12 +14,36 @@
     <router-link to="/about10" class="color">About10</router-link> 
     </nav>
     <router-view></router-view>
+
+    <MixinsWorld :username="username"></MixinsWorld>
+    <MixinsWorld username="바니"></MixinsWorld>
+    <MixinsWorld></MixinsWorld>
+    <button @click="changeName">바꿔!</button>
   </div>
   
 
 </template>
 
 <script>
+
+import MixinsWorld from './components/MixinsWorld.vue';
+
+export default {
+  name: 'App',
+  components: {
+    MixinsWorld
+  },
+  data() {
+    return {
+      username: 'username'
+    }
+  },
+  methods: {
+    changeName() {
+      this.username = '박주희';
+    }
+  }
+}
 
 </script>
 
@@ -31,6 +55,9 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+html{
+  background: beige;
 }
 .color{
   color: tomato;
@@ -47,5 +74,17 @@ nav a {
 
 nav a.router-link-exact-active {
   color: rgb(148, 71, 255);
+}
+button{
+  width: 100px;
+  height: 50px;
+  border: none;
+  border-radius: 35px;
+  background: tomato;
+  color:#fff;
+}
+button:hover{
+  cursor: pointer;
+  background: rgb(247, 147, 129);
 }
 </style>

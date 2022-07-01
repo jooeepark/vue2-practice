@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <h1>박주희 vue 연습!!!!!!!!!!</h1>
+    <h1> Vue </h1>
   </div>
 </template>
 
